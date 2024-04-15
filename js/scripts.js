@@ -20,4 +20,4 @@ let pokemonList = [
             'fire', 'flying'
         ]
     }
-]
+];
