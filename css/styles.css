@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --flying-color-bg: rgb(142, 111, 235);
+    --electric-color-bg: rgb(246, 201, 19);
+    --grass-color-bg: rgb(105, 194, 61);
+    --poison-color-bg: rgb(146, 58, 146);
+    --fire-color-bg: rgb(237, 109, 18);
+    --water-colot-bg: rgb(69, 120, 237);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.type {
+    color: white;
+    padding: 3px;
+}
+
+.grass {
+    background-color: var(--grass-color-bg);
+}
+
+.fire {
+    background-color: var(--fire-color-bg)
+}
+
+.poison {
+    background-color: var(--poison-color-bg)
+}
+
+.electric {
+    background-color: var(--electric-color-bg);
+}
+
+.flying {
+    background-color: var(--flying-color-bg);
+}
+
+.water {
+    background-color: var(--water-colot-bg);
+}
+
+.type:hover {
+    color: black;
+}
