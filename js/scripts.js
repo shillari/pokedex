@@ -27,6 +27,13 @@ let pokemonRepository = (function () {
             types: [
                 'water'
             ]
+        },
+        {
+            name: 'Pidgey',
+            height: 0.3,
+            types: [
+                'flying', 'normal'
+            ]
         }
     ];
 
@@ -52,50 +59,44 @@ let pokemonRepository = (function () {
         return pokemonList.filter(p => p.name === pokemon);
     }
 
+    // Initialize the pokemon list on the screen.
+    function addListItem(pokemon) {
+        // Create pokemon in a list.
+        let elementPokemonlist = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        
+        // Create a button for each pokemon with its event listener.
+        button.innerText = pokemon.name;
+        button.classList.add('pokemon-button', pokemon.types[0]);
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            showDetails(pokemon);
+        });
+        
+        // Add button into the list
+        listItem.appendChild(button);
+        elementPokemonlist.appendChild(listItem);
+    }
+
+    // Show details about the pokemon selected.
+    function showDetails(pokemon) {
+        console.log(`${pokemon.name} (height: ${pokemon.height})`);
+    }
+
     return {
         add: add,
         getAll: getAll,
-        findByName: findByName
+        findByName: findByName,
+        addListItem: addListItem,
+        showDetails: showDetails
     };
 })();
 
-function printPokemonDetails(pokemons) {
+function initializePokemonList(pokemons) {
     pokemons.forEach(pokemon => {
-        // Check if the height is bigger or equal than 1.0m.
-        let bigOne = checkIfBigPokemon(pokemon.height);
-        // Iterates through the types and sets a background color accordingly.
-        let types = getTypesFormatted(pokemon.types);
-        // Prints out the Pokemon's name and its height.
-        document.write(`${pokemon.name} (height: ${pokemon.height}) (types: ${types})${bigOne}`);
-        // Adds breakline after each Pokemon.
-        document.body.appendChild(document.createElement("br"));
+        pokemonRepository.addListItem(pokemon);
     });
 }
 
-function getTypesFormatted(types) {
-    let t = ''
-    types.forEach(type => 
-        t += ` <span class="type ${type}">${type}</span>`);
-    return t;
-}
-
-function checkIfBigPokemon(height) {
-    if (height >= 1.0) {
-        return ' - Wow, that\'s big!';
-    }
-    return '';
-}
-
-/*
-    Exemple to add a new pokemon.
-let p = {
-    name: 'Pidgey',
-    height: 0.3,
-    types: [
-        'flying', 'normal'
-    ]
-};
-pokemonRepository.add(p);
-*/
-printPokemonDetails(pokemonRepository.getAll());
-//console.log(pokemonRepository.findByName('Pikachu'));
+initializePokemonList(pokemonRepository.getAll());

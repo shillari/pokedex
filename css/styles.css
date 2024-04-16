@@ -7,6 +7,7 @@
     --poison-color-bg: rgb(146, 58, 146);
     --fire-color-bg: rgb(237, 109, 18);
     --water-colot-bg: rgb(69, 120, 237);
+    --border-bottom-color: #888;
 }
 
 * {
@@ -26,40 +27,163 @@ body {
 
 header {
     margin: 0 auto;
-    min-height: 80px;
+    min-height: 100px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-bottom-color);
+    align-items: center;
+    
+}
+
+main,
+section {
     padding: 30px;
 }
 
+ul {
+    list-style: none;
+    padding: 0%;
+    height: 100%;
+}
+
+/* 
+    Search bar.
+*/
+.container-search {
+    /*display: flex;*/
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.form-search {
+    float: left;
+    width: 100%;
+    margin-right: 8px;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid var(--border-bottom-color);
+    background-color: transparent;
+}
+
+.form-search:active,
+.form-search:focus {
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+
+.search-button {
+    border: none;
+    background: none;
+    color: var(--border-bottom-color)
+}
+
+.search-button:hover,
+.search-button:focus {
+    border: 1px solid var(--border-bottom-color);
+    border-radius: 3px;
+}
+
+.search-button:active {
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/*
+    Pokemon list.
+*/
+.pokemon-list {
+    margin: 0%;
+    justify-content: space-around;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.pokemon-button {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 30px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+/*
+    Pokemon background color according to their types.
+*/
 .type {
     color: white;
     background-color: gray;
     padding: 3px;
 }
 
-.type:hover {
-    color: black;
+.grass {
+    background-color: white;
+    border: 3px solid var(--grass-color-bg);
 }
 
-.grass {
+.grass:hover {
+    color: white;
     background-color: var(--grass-color-bg);
 }
 
 .fire {
-    background-color: var(--fire-color-bg)
+    background-color: white;
+    border: 3px solid var(--fire-color-bg)
+}
+
+.fire:hover {
+    color: white;
+    background-color: var(--fire-color-bg);
 }
 
 .poison {
-    background-color: var(--poison-color-bg)
+    background-color: white;
+    border: 3px solid var(--poison-color-bg)
+}
+
+.poison:hover {
+    color: white;
+    background-color: var(--poison-color-bg);
 }
 
 .electric {
+    background-color: white;
+    border: 3px solid var(--electric-color-bg);
+}
+
+.electric:hover {
+    color: white;
     background-color: var(--electric-color-bg);
 }
 
 .flying {
+    background-color: white;
+    border: 3px solid var(--flying-color-bg);
+}
+
+.flying:hover {
+    color: white;
     background-color: var(--flying-color-bg);
 }
 
 .water {
+    background-color: white;
+    border: 3px solid var(--water-colot-bg);
+}
+
+.water:hover {
+    color: white;
     background-color: var(--water-colot-bg);
+}
+
+.pokemon-button:active {
+    color: black;
 }
