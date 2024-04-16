@@ -19,11 +19,25 @@ body {
     font-style: normal;
     line-height: 1.6;
     font-size: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+header {
+    margin: 0 auto;
+    min-height: 80px;
+    padding: 30px;
 }
 
 .type {
     color: white;
+    background-color: gray;
     padding: 3px;
+}
+
+.type:hover {
+    color: black;
 }
 
 .grass {
@@ -48,8 +62,4 @@ body {
 
 .water {
     background-color: var(--water-colot-bg);
-}
-
-.type:hover {
-    color: black;
 }
