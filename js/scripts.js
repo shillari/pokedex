@@ -27,8 +27,9 @@ let pokemonRepository = (function () {
     // Initialize the pokemon list on the screen.
     function addListItem(pokemon) {
         // Create pokemon in a list.
-        let elementPokemonlist = document.querySelector('.pokemon-list');
-        let listItem = document.createElement('li');
+        let elementPokemonGrid = document.querySelector('.grid');
+        let gridItem = document.createElement('div');
+        gridItem.classList.add('grid__item');
         let button = document.createElement('button');
 
         // Create a button for each pokemon with its event listener.
@@ -40,8 +41,8 @@ let pokemonRepository = (function () {
         });
 
         // Add button into the list
-        listItem.appendChild(button);
-        elementPokemonlist.appendChild(listItem);
+        gridItem.appendChild(button);
+        elementPokemonGrid.appendChild(gridItem);
     }
 
     // Show details about the pokemon selected.
