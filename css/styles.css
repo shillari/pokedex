@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&family=Rubik+Scribble&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Jersey+25&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Scribble&family=Rubik+Spray+Paint&display=swap');
 
 :root {
     --flying-color-bg: rgb(142, 111, 235);
@@ -20,7 +20,7 @@
     --ghost-color-bg: rgb(100, 78, 136);
     --border-bottom-color: #888;
     --red-pokemon: rgb(206, 17, 17);
-    --blue-pokemon: rgb(19, 19, 197);
+    --blue-pokemon: rgb(71, 71, 175);
 }
 
 * {
@@ -28,8 +28,8 @@
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: "Rubik Spray Paint", system-ui;
+  font-weight: 400;
     font-style: normal;
     line-height: 1.6;
     font-size: 20px;
@@ -74,6 +74,7 @@ ul {
 .form-search {
     float: left;
     width: 100%;
+    font-family: "Lato", sans-serif;
     margin-right: 8px;
     padding-bottom: 5px;
     border: none;
@@ -123,22 +124,21 @@ ul {
 }
 
 .pokemon-button {
-    border: 3px solid var(--blue-pokemon);
+    border: 2px solid var(--blue-pokemon);
     border-radius: 20px;
     background-color: var(--electric-color-bg);
     width: 100%;
     height: 100%;
     min-height: 90px;
-    font-size: 20px;
-    color: var(--blue-pokemon);
     cursor: pointer;
-    /* Font */
-    font-family: "Rubik Spray Paint", system-ui;
-    font-weight: 700;
-    font-style: normal;
     font-size: 40px;
+    font-weight: 700;
     color: beige;
-    -webkit-text-stroke-width: 2px;
+    text-shadow: -1px 1px 0 black,
+                3px 3px 0 black,
+                1px -1px 0 var(--blue-pokemon),
+                -1px -1px 0 var(--blue-pokemon);
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--blue-pokemon);
 }
 
@@ -167,13 +167,10 @@ ul {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-
     /* to show it above other content */
     z-index: 999; 
-
     /* to allow scrolling if the screen is not high enough*/
     overflow: auto; 
-
     /* this is used to center the modal */
     display: grid;
     text-align: center;
@@ -192,9 +189,6 @@ ul {
 }
 
 .modal-title {
-    font-family: "Rubik Spray Paint", system-ui;
-    font-weight: 700;
-    font-style: normal;
     font-size: 40px;
     color: var(--electric-color-bg);
     -webkit-text-stroke-width: 1px;
@@ -208,13 +202,10 @@ ul {
 
 .modal-text,
 .modal-types {
-    font-family: "Rubik Spray Paint", system-ui;
-    font-weight: 700;
-    font-style: normal;
     font-size: 30px;
     line-height: 0.7;
     color: var(--electric-color-bg);
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     padding-left: 20px;
 }
@@ -246,11 +237,12 @@ ul {
 }
 
 .fire {
-    color: var(--fire-color-bg)
+    color: var(--fire-color-bg);
 }
 
 .poison {
-    color: var(--poison-color-bg)
+    color: var(--poison-color-bg);
+    -webkit-text-stroke-color: white;
 }
 
 .electric {
@@ -279,6 +271,7 @@ ul {
 
 .fighting {
     color: var(--fighting-color-bg);
+    -webkit-text-stroke-color: white;
 }
 
 .rock {
@@ -299,6 +292,7 @@ ul {
 
 .dragon {
     color: var(--dragon-colot-bg);
+    -webkit-text-stroke-color: white;
 }
 
 .dark {
