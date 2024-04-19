@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&family=Rubik+Scribble&family=Rubik+Spray+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
     --flying-color-bg: rgb(142, 111, 235);
@@ -194,7 +194,7 @@ ul {
 }
 
 .modal-title {
-    font-family: "Rubik Spray Paint", system-ui;
+    font-weight: 700;
     font-size: 40px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
