@@ -52,10 +52,6 @@ let pokemonRepository = (function () {
             let modalTitle = $('.modal-title');
             let modalBody = $('.modal-body');
 
-            // Clear all existing modal content
-            modalTitle.empty();
-            modalBody.empty();
-
             // Modal to show pokemon details.
             modalTitle.removeClass()
                         .addClass('modal-title ' 
@@ -104,6 +100,12 @@ let pokemonRepository = (function () {
             modalBody.append(modalHeight);
             modalBody.append(modalWeight);
             modalBody.append(modalTypes);
+            $('#exampleModal').on('hidden.bs.modal', function(e){
+                e.preventDefault();
+                // Clear all existing modal content
+                modalTitle.empty();
+                modalBody.empty();
+            });
         });
     }
 
