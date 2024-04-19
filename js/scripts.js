@@ -52,6 +52,10 @@ let pokemonRepository = (function () {
             let modalTitle = $('.modal-title');
             let modalBody = $('.modal-body');
 
+            // Clear all existing modal content
+            modalTitle.empty();
+            modalBody.empty();
+
             // Modal to show pokemon details.
             modalTitle.removeClass()
                         .addClass('modal-title ' 
