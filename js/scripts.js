@@ -104,6 +104,12 @@ let pokemonRepository = (function () {
             modalBody.append(modalHeight);
             modalBody.append(modalWeight);
             modalBody.append(modalTypes);
+            $('#exampleModal').on('hidden.bs.modal', function(e){
+                e.preventDefault();
+                // Clear all existing modal content
+                modalTitle.empty();
+                modalBody.empty();
+            });
         });
     }
 
